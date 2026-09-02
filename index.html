@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vaibhav Chopra — aspiring Full Stack Developer portfolio." />
+  <title>Vaibhav Chopra | 3D Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+  <canvas id="three-canvas"></canvas>
+
+  <header class="topbar glass">
+    <a href="#home" class="brand"><span>VC</span><strong>Vaibhav</strong></a>
+    <nav>
+      <a class="active" href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="assets/Vaibhav_Chopra_Recommended_Format_CV.docx" download>Resume ↗</a>
+    <button id="theme-toggle" class="theme-toggle" title="Toggle theme">
+      <span class="sun">☀️</span>
+      <span class="moon">🌙</span>
+    </button>
+  </header>
+
+  <main>
+    <section id="home" class="hero section-shell">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span></span> ASPIRING FULL STACK DEVELOPER</div>
+        <h1>Hi, I’m <em>Vaibhav Chopra</em></h1>
+        <p class="hero-sub">Python Developer <b>·</b> AI Enthusiast <b>·</b> Problem Solver</p>
+        <p class="hero-text">I build practical, user-friendly applications with Python, web technologies and API integrations, while continuously exploring AI and modern software development.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View Projects <span>↘</span></a>
+          <a class="btn btn-ghost" href="#contact">Contact Me <span>✦</span></a>
+        </div>
+        <div class="mini-stats">
+          <div><strong>3+</strong><span>Featured projects</span></div>
+          <div><strong>4</strong><span>Certificates</span></div>
+          <div><strong>1st</strong><span>Vertos Tech Summit</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal delay-1">
+        <div class="orbit orbit-1"></div><div class="orbit orbit-2"></div>
+        <div class="platform">
+          <div class="platform-ring"></div>
+          <div class="laptop">
+            <div class="screen">
+              <div class="code-line w-80"></div><div class="code-line w-55"></div><div class="code-line w-70"></div><div class="code-line w-40"></div><div class="code-line w-65"></div>
+              <div class="code-glow">&lt; / &gt;</div>
+            </div>
+            <div class="keyboard"></div>
+            <div class="base"></div>
+          </div>
+        </div>
+        <div class="float-chip chip-python">Python</div>
+        <div class="float-chip chip-ai">AI</div>
+        <div class="float-chip chip-api">API</div>
+      </div>
+    </section>
+
+    <section id="about" class="section-shell section">
+      <div class="section-title reveal"><span>01</span><div><p>PROFILE</p><h2>About Me</h2></div></div>
+      <div class="about-grid">
+        <article class="panel tilt reveal">
+          <div class="avatar">
+            <img src="assets/profile-photo.jpg" alt="Vaibhav Chopra portrait" />
+          </div>
+          <div><h3>Vaibhav Chopra</h3><p>Phagwara, Punjab · B.Tech CSE at LPU</p></div>
+          <p class="muted">Currently pursuing Computer Science and Engineering at Lovely Professional University. My focus is on building software that is simple to use, technically solid and useful in the real world.</p>
+          <div class="contact-lines">
+            <a href="mailto:vaibhavchopra302@gmail.com">✉ vaibhavchopra302@gmail.com</a>
+            <a href="tel:+919872903731">☎ +91 98729 03731</a>
+            <a href="https://www.linkedin.com/in/vaibhavchopra02" target="_blank" rel="noreferrer">in linkedin.com/in/vaibhavchopra02</a>
+          </div>
+        </article>
+        <div class="achievement-stack reveal delay-1">
+          <div class="stat-card tilt"><span class="icon">🎓</span><div><small>EDUCATION</small><strong>B.Tech CSE</strong><p>LPU · 2025 – Present</p></div></div>
+          <div class="stat-card tilt"><span class="icon">🏆</span><div><small>ACHIEVEMENT</small><strong>1st Place</strong><p>Vertos Tech Summit · Coding</p></div></div>
+          <div class="stat-card tilt"><span class="icon">⭐</span><div><small>ACADEMICS</small><strong>3rd Position</strong><p>Class 12 · 2025</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section-shell section">
+      <div class="section-title reveal"><span>02</span><div><p>TOOLKIT</p><h2>Technical Skills</h2></div></div>
+      <div class="skills-grid">
+        <div class="skill-card tilt reveal"><div class="skill-icon">Py</div><h3>Python</h3><p>Programming & application development</p></div>
+        <div class="skill-card tilt reveal"><div class="skill-icon">&lt;/&gt;</div><h3>HTML / CSS</h3><p>Responsive web interfaces</p></div>
+        <div class="skill-card tilt reveal"><div class="skill-icon">JS</div><h3>JavaScript</h3><p>Interactive web experiences</p></div>
+        <div class="skill-card tilt reveal"><div class="skill-icon">Tk</div><h3>Tkinter</h3><p>Python GUI development</p></div>
+        <div class="skill-card tilt reveal"><div class="skill-icon">CT</div><h3>CustomTkinter</h3><p>Modern desktop UI</p></div>
+        <div class="skill-card tilt reveal"><div class="skill-icon">API</div><h3>API Integration</h3><p>Connecting applications to services</p></div>
+        <div class="skill-card tilt reveal"><div class="skill-icon">Git</div><h3>Git / GitHub</h3><p>Version control & collaboration</p></div>
+        <div class="skill-card tilt reveal"><div class="skill-icon">AI</div><h3>AI & Problem Solving</h3><p>Exploring intelligent applications</p></div>
+      </div>
+    </section>
+
+    <section id="projects" class="section-shell section">
+      <div class="section-title reveal"><span>03</span><div><p>BUILD LOG</p><h2>Featured Projects</h2></div></div>
+      <div class="projects-grid">
+        <article class="project-card tilt reveal">
+          <div class="project-visual movie"><div class="poster-icon">◉</div><span>DATA + ML</span></div>
+          <div class="project-body"><div class="project-head"><h3>Movie Recommendation System</h3><span>01</span></div><p>Python-based recommendation system using data analysis and user preference algorithms to suggest movies.</p><div class="tags"><span>Python</span><span>Data Analysis</span><span>ML</span></div><a class="project-link" href="https://github.com/Vaibhav-coder-king/Mood-Match-Recommendation-App-GUI" target="_blank" rel="noreferrer">View on GitHub ↗</a></div>
+        </article>
+        <article class="project-card tilt reveal delay-1">
+          <div class="project-visual chatbot"><div class="bot-orb">AI</div><span>API + AI</span></div>
+          <div class="project-body"><div class="project-head"><h3>Chatbot AI with API Integration</h3><span>02</span></div><p>Conversational chatbot using API keys for intelligent and dynamic responses with a desktop GUI experience.</p><div class="tags"><span>Python</span><span>API</span><span>AI</span><span>CustomTkinter</span></div><a class="project-link" href="https://github.com/Vaibhav-coder-king/Chat_bot" target="_blank" rel="noreferrer">View on GitHub ↗</a></div>
+        </article>
+        <article class="project-card tilt reveal delay-2">
+          <div class="project-visual hangman"><div class="hang-icon">⌁</div><span>PYTHON GUI</span></div>
+          <div class="project-body"><div class="project-head"><h3>Hangman Game</h3><span>03</span></div><p>Interactive Hangman game built with Tkinter, combining GUI design, game logic and user interaction.</p><div class="tags"><span>Python</span><span>Tkinter</span><span>GUI</span></div><a class="project-link" href="https://github.com/Vaibhav-coder-king/Hangman_GUI" target="_blank" rel="noreferrer">View on GitHub ↗</a></div>
+        </article>
+      </div>
+      <a class="github-strip" href="https://github.com/Vaibhav-coder-king" target="_blank" rel="noreferrer">Explore more on GitHub <span>⌁</span></a>
+    </section>
+
+    <section id="certificates" class="section-shell section">
+      <div class="section-title reveal"><span>04</span><div><p>PROOF OF LEARNING</p><h2>Certificates</h2></div></div>
+      <div class="cert-grid">
+        <article class="cert-card tilt reveal" data-title="Vertos Tech Summit — Certificate of Merit" data-img="assets/vertos.png">
+          <div class="cert-img-wrap"><img src="assets/vertos.png" alt="Vertos Tech Summit certificate"><span class="cert-badge">1ST PLACE</span></div>
+          <div class="cert-body"><h3>Vertos Tech Summit</h3><p>Certificate of Merit · First place in a competitive workshop on modern skills of coding.</p><div class="cert-actions"><button class="preview-btn">Preview</button><a href="https://drive.google.com/file/d/1k3BXUf7B12R6Zky71iG8iOEjKsKlDErP/view?usp=drive_link" target="_blank" rel="noreferrer">Verify ↗</a></div></div>
+        </article>
+        <article class="cert-card tilt reveal delay-1" data-title="CS250: Python for Data Science" data-img="assets/python_ds.png">
+          <div class="cert-img-wrap"><img src="assets/python_ds.png" alt="CS250 Python for Data Science certificate"><span class="cert-badge blue">86.08%</span></div>
+          <div class="cert-body"><h3>CS250: Python for Data Science</h3><p>Saylor Academy · 67 hours · 86.08% · Issued January 26, 2026.</p><div class="cert-actions"><button class="preview-btn">Preview</button><a href="https://drive.google.com/file/d/1ro1-_pQ7lP49qQEeVYbt0e611sWQXBiA/view?usp=drive_link" target="_blank" rel="noreferrer">Verify ↗</a></div></div>
+        </article>
+        <article class="cert-card tilt reveal" data-title="Finlatics — Certificate of Achievement" data-img="assets/finlatics.png">
+          <div class="cert-img-wrap"><img src="assets/finlatics.png" alt="Finlatics certificate"><span class="cert-badge green">ACHIEVEMENT</span></div>
+          <div class="cert-body"><h3>Finlatics</h3><p>Certificate of Achievement · Issued April 24, 2026.</p><div class="cert-actions"><button class="preview-btn">Preview</button><a href="https://drive.google.com/file/d/1XpbdbNBPYa9tTEpBTMgisWXjm-1XJjMQ/view?usp=drive_link" target="_blank" rel="noreferrer">Verify ↗</a></div></div>
+        </article>
+        <article class="cert-card tilt reveal delay-1" data-title="Basics of Leadership & Human Behavior in Change Management" data-img="assets/leadership.png">
+          <div class="cert-img-wrap"><img src="assets/leadership.png" alt="UniAthena leadership certificate"><span class="cert-badge pink">LEADERSHIP</span></div>
+          <div class="cert-body"><h3>Leadership & Human Behavior</h3><p>UniAthena with Cambridge International Qualifications, UK · October 25, 2025.</p><div class="cert-actions"><button class="preview-btn">Preview</button><a href="https://drive.google.com/file/d/1nHc1U_1JtnO-SKVtzgO4bqdNTFmk3tXv/view?usp=drive_link" target="_blank" rel="noreferrer">Verify ↗</a></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section-shell section contact-section">
+      <div class="contact-card glass reveal">
+        <div><span class="eyebrow"><span></span> LET’S CONNECT</span><h2>Have an idea?<br><em>Let’s build it.</em></h2><p>I’m open to opportunities, projects, collaborations and learning experiences.</p></div>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:vaibhavchopra302@gmail.com">Email Me ↗</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/vaibhavchopra02" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <a class="btn btn-ghost" href="https://github.com/Vaibhav-coder-king" target="_blank" rel="noreferrer">GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>© 2026 Vaibhav Chopra</span><span>Built with curiosity, code & 3D effects.</span></footer>
+
+  <button id="topBtn" aria-label="Back to top">↑</button>
+  <div id="modal" class="modal" aria-hidden="true"><div class="modal-backdrop"></div><div class="modal-box"><button id="closeModal" class="modal-close">×</button><h3 id="modalTitle"></h3><img id="modalImg" src="" alt="Certificate preview"></div></div>
+  <script src="script.js"></script>
+</body>
+</html>
