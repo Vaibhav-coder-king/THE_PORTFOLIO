@@ -7,6 +7,22 @@
   animation: float-with-input 6s ease-in-out infinite;
 }
 
+.brand-photo {
+  display: block;
+  width: 52px;
+  height: 52px;
+  border: 2px solid #9b5cff;
+  border-radius: 11px;
+  object-fit: cover;
+  object-position: center 28%;
+  box-shadow: 0 0 25px rgba(155,92,255,.45);
+}
+
+:root[data-theme="light"] .brand-photo {
+  border-color: #7040ff;
+  box-shadow: 0 0 25px rgba(112,64,255,.35);
+}
+
 @keyframes float-with-input {
   0%,
   100% {
@@ -19,6 +35,11 @@
 }
 
 @media (max-width: 560px) {
+  .brand-photo {
+    width: 48px;
+    height: 48px;
+  }
+
   .platform {
     --platform-scale: .7;
   }
