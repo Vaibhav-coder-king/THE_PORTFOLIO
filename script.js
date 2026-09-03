@@ -123,6 +123,24 @@ const observer = new IntersectionObserver(
 
 document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
+// ===== HERO MODEL SCROLL ROTATION =====
+const platform = document.querySelector('.platform');
+let platformRotationFrame;
+
+function updatePlatformRotation() {
+  const rotation = window.scrollY * -0.72;
+  platform.style.setProperty('--platform-rotate-y', `${rotation}deg`);
+}
+
+window.addEventListener('scroll', () => {
+  if (platformRotationFrame) return;
+  platformRotationFrame = requestAnimationFrame(() => {
+    updatePlatformRotation();
+    platformRotationFrame = null;
+  });
+}, { passive: true });
+updatePlatformRotation();
+
 // ===== 3D TILT EFFECT =====
 document.querySelectorAll('.tilt').forEach((card) => {
   card.addEventListener('pointermove', (e) => {
@@ -152,18 +170,37 @@ addEventListener(
 
 document.getElementById('topBtn').onclick = () => scrollTo({ top: 0, behavior: 'smooth' });
 
+// ===== MOBILE NAVIGATION DRAWER =====
+const menuToggle = document.getElementById('menu-toggle');
+const mobileDrawer = document.getElementById('mobile-drawer');
+const drawerBackdrop = document.getElementById('drawer-backdrop');
+const drawerClose = document.getElementById('drawer-close');
+
+function setDrawerOpen(isOpen) {
+  mobileDrawer.classList.toggle('open', isOpen);
+  drawerBackdrop.classList.toggle('open', isOpen);
+  mobileDrawer.setAttribute('aria-hidden', String(!isOpen));
+  menuToggle.setAttribute('aria-expanded', String(isOpen));
+  menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+}
+
+menuToggle.addEventListener('click', () => setDrawerOpen(!mobileDrawer.classList.contains('open')));
+drawerClose.addEventListener('click', () => setDrawerOpen(false));
+drawerBackdrop.addEventListener('click', () => setDrawerOpen(false));
+mobileDrawer.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setDrawerOpen(false)));
+
 // ===== MODAL =====
 const modal = document.getElementById('modal'),
   modalImg = document.getElementById('modalImg'),
   modalTitle = document.getElementById('modalTitle');
 
 document.querySelectorAll('.cert-card').forEach((card) =>
-  card.querySelector('.preview-btn').addEventListener('click', () => {
+  card.querySelectorAll('.preview-btn, .cert-img-wrap').forEach((previewButton) => previewButton.addEventListener('click', () => {
     modalTitle.textContent = card.dataset.title;
     modalImg.src = card.dataset.img;
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
-  })
+  }))
 );
 
 function closeModal() {
@@ -176,6 +213,7 @@ document.getElementById('closeModal').onclick = closeModal;
 modal.querySelector('.modal-backdrop').onclick = closeModal;
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeModal();
+  if (e.key === 'Escape') setDrawerOpen(false);
 });
 
 // ===== ANIMATION LOOP =====

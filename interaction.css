@@ -1,0 +1,31 @@
+.platform {
+  --platform-scale: 1;
+  --platform-rotate-x: 55deg;
+  --platform-rotate-y: 0deg;
+  --platform-rotate-z: -6deg;
+  transform: scale(var(--platform-scale)) rotateX(var(--platform-rotate-x)) rotateY(var(--platform-rotate-y)) rotateZ(var(--platform-rotate-z)) translateY(0);
+  animation: float-with-input 6s ease-in-out infinite;
+}
+
+@keyframes float-with-input {
+  0%,
+  100% {
+    transform: scale(var(--platform-scale)) rotateX(var(--platform-rotate-x)) rotateY(var(--platform-rotate-y)) rotateZ(var(--platform-rotate-z)) translateY(0);
+  }
+
+  50% {
+    transform: scale(var(--platform-scale)) rotateX(var(--platform-rotate-x)) rotateY(var(--platform-rotate-y)) rotateZ(var(--platform-rotate-z)) translateY(-15px);
+  }
+}
+
+@media (max-width: 560px) {
+  .platform {
+    --platform-scale: .7;
+  }
+}
+
+@media (max-width: 380px) {
+  .platform {
+    --platform-scale: .58;
+  }
+}
